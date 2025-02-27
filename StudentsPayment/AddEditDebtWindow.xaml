@@ -1,0 +1,18 @@
+﻿<Window x:Class="StudentsPayment.AddEditDebtWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить/Редактировать долг" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="ID студента:"/>
+            <TextBox x:Name="StudentIdTextBox" Text="{Binding student_id}"/>
+            <TextBlock Text="Сумма долга:"/>
+            <TextBox x:Name="DebtAmountTextBox" Text="{Binding debt_amount}"/>
+            <TextBlock Text="Месяц:"/>
+            <TextBox x:Name="MonthTextBox" Text="{Binding month}"/>
+            <TextBlock Text="Год:"/>
+            <TextBox x:Name="YearTextBox" Text="{Binding year}"/>
+            <Button Content="Сохранить" Click="SaveButton_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

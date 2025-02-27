@@ -1,0 +1,17 @@
+﻿<Window x:Class="StudentsPayment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Главное меню" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Button Content="Студенты" Click="StudentsButton_Click" Margin="5" Width="100"/>
+            <Button Content="Комнаты" Click="RoomsButton_Click" Margin="5" Width="100"/>
+            <Button Content="Оплаты" Click="PaymentsButton_Click" Margin="5" Width="100"/>
+            <Button Content="Долги" Click="DebtsButton_Click" Margin="5" Width="100"/>
+            <Button x:Name="UsersButton" Content="Пользователи" Click="UsersButton_Click" Margin="5" Width="100" Visibility="Collapsed"/>
+            <Button Content="Выйти" Click="LogoutButton_Click" Margin="5" Width="100" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Margin="10,50,10,10" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

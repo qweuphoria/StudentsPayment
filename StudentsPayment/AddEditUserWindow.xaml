@@ -1,0 +1,23 @@
+﻿<Window x:Class="StudentsPayment.AddEditUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить/Редактировать пользователя" Height="350" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Логин:"/>
+            <TextBox x:Name="LoginTextBox" Text="{Binding username}"/>
+            <TextBlock Text="ФИО:"/>
+            <TextBox x:Name="FullNameTextBox" Text="{Binding full_name}"/>
+            <TextBlock Text="Пароль:"/>
+            <PasswordBox x:Name="PasswordBox"/>
+            <TextBlock Text="Роль:"/>
+            <ComboBox x:Name="RoleComboBox" SelectedValue="{Binding role}" SelectionChanged="RoleComboBox_SelectionChanged">
+                <ComboBoxItem Content="Администратор"/>
+                <ComboBoxItem Content="Пользователь"/>
+            </ComboBox>
+            <TextBlock x:Name="SecretCodeLabel" Text="Секретный код:" Visibility="Collapsed"/>
+            <TextBox x:Name="SecretCodeTextBox" Visibility="Collapsed"/>
+            <Button Content="Сохранить" Click="SaveButton_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
